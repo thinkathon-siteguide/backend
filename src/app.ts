@@ -16,9 +16,11 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 // Routes
 import { healthRoutes } from './modules/health/health.routes';
 import { authRoutes } from './modules/auth/auth.routes';
+import workspaceRoutes from './modules/workspace/workspace.routes';
 
 app.use('/health', healthRoutes);
 app.use('/auth', authRoutes);
+app.use('/workspaces', workspaceRoutes);
 app.get('/', (req, res) => {
   res.send('API is running');
 });

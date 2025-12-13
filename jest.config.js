@@ -3,6 +3,7 @@ module.exports = {
   testEnvironment: 'node',
   roots: ['<rootDir>/src'],
   moduleNameMapper: {
+    '^uuid$': require.resolve('uuid'),
     '^@core/(.*)$': '<rootDir>/src/core/$1',
     '^@modules/(.*)$': '<rootDir>/src/modules/$1',
     '^@middlewares/(.*)$': '<rootDir>/src/middlewares/$1',

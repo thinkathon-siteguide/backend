@@ -31,3 +31,21 @@
 2025-12-13 11:35:44:3544 [33mwarn[39m: [33mMongoDB disconnected[39m
 2025-12-13 11:37:43:3743 [32minfo[39m: [32mConnected to MongoDB[39m
 2025-12-13 11:37:43:3743 [32minfo[39m: [32mServer running in development mode on port 3000[39m
+2025-12-13 12:35:08:358 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 12:35:08:358 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-13 12:40:13:4013 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 12:40:13:4013 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-13 12:40:39:4039 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 12:40:39:4039 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-13 12:41:01:411 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 12:41:01:411 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-13 12:45:09:459 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
+2025-12-13 12:45:09:459 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
+2025-12-13 13:16:04:164 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
+2025-12-13 13:16:04:164 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
+2025-12-13 13:19:24:1924 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 13:19:24:1924 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-13 13:20:54:2054 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 13:20:54:2054 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-13 13:21:21:2121 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 13:21:21:2121 [32minfo[39m: [32mServer running in development mode on port 4000[39m

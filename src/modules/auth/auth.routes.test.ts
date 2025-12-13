@@ -1,6 +1,6 @@
 import request from 'supertest';
 import app from '../../app';
-import { User } from './models/User';
+import { User } from './User';
 import mongoose from 'mongoose';
 
 // We need to mock the database connection for integration tests 

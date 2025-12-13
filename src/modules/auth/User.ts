@@ -36,12 +36,16 @@ const userSchema = new Schema<IUser>(
   }
 );
 
-userSchema.pre('save', async function (next) {
+userSchema.pre('save', async function (next: any) {
   if (!this.isModified('password')) return next();
-  if (this.password) {
-      this.password = await bcrypt.hash(this.password, 12);
+  try {
+    if (this.password) {
+        this.password = await bcrypt.hash(this.password, 12);
+    }
+    next();
+  } catch (err: any) {
+    next(err);
   }
-  next();
 });
 
 userSchema.methods.correctPassword = async function (

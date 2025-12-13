@@ -1,20 +1,20 @@
 import jwt from 'jsonwebtoken';
-import { User, IUser } from './models/User';
-import { config } from '../../../config/config';
-import { BadRequestError, AuthFailureError } from '../../../core/error.response';
+import { User, IUser } from './User';
+import { config } from '../../config/config';
+import { BadRequestError, AuthFailureError } from '../../core/error.response';
 
 const signToken = (id: string) => {
   return jwt.sign({ id }, config.jwt.secret, {
     expiresIn: config.jwt.expiresIn,
-  });
+  } as jwt.SignOptions);
 };
 
 export const signup = async (userData: any) => {
   const exists = await User.findOne({ email: userData.email });
   if (exists) throw new BadRequestError('User already exists');
 
-  const newUser = (await User.create(userData)) as IUser;
-  const token = signToken(newUser._id as string);
+  const newUser = (await User.create(userData)) as unknown as IUser;
+  const token = signToken((newUser._id as any).toString());
 
   // Remove password from output
   const userObj = newUser.toObject();

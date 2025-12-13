@@ -1,6 +1,6 @@
 import { signup, login } from './auth.service';
-import { User } from './models/User';
-import { BadRequestError, AuthFailureError } from '../../../core/error.response';
+import { User } from './User';
+import { BadRequestError, AuthFailureError } from '../../core/error.response';
 import jwt from 'jsonwebtoken';
 
 // Mock mongoose model

@@ -5,7 +5,6 @@ import { config } from '../config/config';
 
 // Removed broken errorHandler
 
-
 // Extend ApiError to have a static handle method for cleaner usage
 // We need to modify the class in error.response.ts or just handle it here.
 // Let's just handle it here for now to avoid circular deps or complex class logic if not needed.
@@ -17,7 +16,7 @@ const sendError = (res: Response, error: ApiError) => {
     code: error.statusCode,
     type: error.type,
     message: error.message,
-    errors: error.rawErrors,
+    errors: error.rawErrors
   });
 };
 
@@ -32,12 +31,15 @@ export const globalErrorHandler = (
     return;
   }
 
-  logger.error(`Unexpected Error: ${err.message}`, { stack: err.stack });
+  logger.error(`Unexpected Error: ${err.message}`);
+  logger.error(`Stack trace: ${err.stack}`);
+  console.error('Full Error Object:', err);
+  console.error('Stack Trace:', err.stack);
 
   if (config.env === 'development') {
     return res.status(500).json({
       message: err.message,
-      stack: err.stack,
+      stack: err.stack
     });
   }
 

@@ -28,3 +28,19 @@
 2025-12-13 13:22:42:2242 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
 2025-12-13 13:30:15:3015 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
 2025-12-13 13:30:15:3015 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
+2025-12-13 14:04:10:410 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
+2025-12-13 14:04:10:410 [31merror[39m: [31mUnexpected Error: Unexpected Error[39m
+2025-12-13 14:16:24:1624 [31merror[39m: [31mUnexpected Error: next is not a function[39m
+2025-12-13 14:25:11:2511 [31merror[39m: [31mUnexpected Error: next is not a function[39m
+2025-12-13 14:27:01:271 [31merror[39m: [31mUnexpected Error: next is not a function[39m
+2025-12-13 14:27:01:271 [31merror[39m: [31mStack trace: TypeError: next is not a function[39m
+[31m    at model.<anonymous> (/Users/farouq/Documents/Project/siteguard/backend/src/modules/workspace/models/Workspace.ts:201:3)[39m
+[31m    at Kareem.execPre (/Users/farouq/Documents/Project/siteguard/backend/node_modules/kareem/index.js:63:39)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+[31m    at async model.$__save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:369:5)[39m
+[31m    at async model.save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:609:5)[39m
+[31m    at async /Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:2722:9[39m
+[31m    at async Promise.all (index 0)[39m
+[31m    at async Function.create (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:2707:11)[39m
+[31m    at async Object.createWorkspace (/Users/farouq/Documents/Project/siteguard/backend/src/modules/workspace/workspace.service.ts:55:21)[39m
+[31m    at async createWorkspace (/Users/farouq/Documents/Project/siteguard/backend/src/modules/workspace/workspace.controller.ts:26:23)[39m

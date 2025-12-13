@@ -323,7 +323,7 @@ export const saveArchitecturePlan = async (
 ): Promise<IArchitecturePlan> => {
   const workspace = await getWorkspaceById(workspaceId, userId);
 
-  if (!plan.costEstimate || !plan.timeline || !plan.stages || !plan.summary) {
+  if (!plan.sections || !plan.materials || !plan.stages || !plan.summary) {
     throw new BadRequestError('Invalid architecture plan data');
   }
 

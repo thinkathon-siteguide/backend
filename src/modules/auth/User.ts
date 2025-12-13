@@ -36,15 +36,10 @@ const userSchema = new Schema<IUser>(
   }
 );
 
-userSchema.pre('save', async function (next: any) {
-  if (!this.isModified('password')) return next();
-  try {
-    if (this.password) {
-        this.password = await bcrypt.hash(this.password, 12);
-    }
-    next();
-  } catch (err: any) {
-    next(err);
+userSchema.pre('save', async function () {
+  if (!this.isModified('password')) return;
+  if (this.password) {
+    this.password = await bcrypt.hash(this.password, 12);
   }
 });
 

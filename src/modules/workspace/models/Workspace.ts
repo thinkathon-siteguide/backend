@@ -9,18 +9,29 @@ export interface IResourceItem {
   status: 'Good' | 'Low' | 'Critical';
 }
 
-export interface IArchitectureStage {
-  name: string;
+export interface IArchitectureSection {
+  title: string;
   description: string;
+}
+
+export interface IArchitectureMaterial {
+  name: string;
+  quantity: string;
+  specification: string;
+}
+
+export interface IArchitectureStage {
+  phase: string;
   duration: string;
+  tasks: string[];
 }
 
 export interface IArchitecturePlan {
-  costEstimate: string;
-  timeline: string;
-  materials: string[];
+  sections: IArchitectureSection[];
+  materials: IArchitectureMaterial[];
   stages: IArchitectureStage[];
   summary: string;
+  createdAt?: Date;
 }
 
 export interface IHazard {
@@ -69,18 +80,29 @@ const resourceItemSchema = new Schema<IResourceItem>({
   },
 }, { _id: false });
 
-const architectureStageSchema = new Schema<IArchitectureStage>({
-  name: { type: String, required: true },
+const architectureSectionSchema = new Schema<IArchitectureSection>({
+  title: { type: String, required: true },
   description: { type: String, required: true },
+}, { _id: false });
+
+const architectureMaterialSchema = new Schema<IArchitectureMaterial>({
+  name: { type: String, required: true },
+  quantity: { type: String, required: true },
+  specification: { type: String, required: true },
+}, { _id: false });
+
+const architectureStageSchema = new Schema<IArchitectureStage>({
+  phase: { type: String, required: true },
   duration: { type: String, required: true },
+  tasks: [{ type: String }],
 }, { _id: false });
 
 const architecturePlanSchema = new Schema<IArchitecturePlan>({
-  costEstimate: { type: String, required: true },
-  timeline: { type: String, required: true },
-  materials: [{ type: String }],
+  sections: [architectureSectionSchema],
+  materials: [architectureMaterialSchema],
   stages: [architectureStageSchema],
   summary: { type: String, required: true },
+  createdAt: { type: Date },
 }, { _id: false });
 
 const hazardSchema = new Schema<IHazard>({
@@ -174,14 +196,12 @@ const workspaceSchema = new Schema<IWorkspace>(
   }
 );
 
-workspaceSchema.pre('save', function (next: any) {
+workspaceSchema.pre('save', function () {
   this.lastUpdated = new Date();
-  next();
 });
 
-workspaceSchema.pre('findOneAndUpdate', function (next: any) {
+workspaceSchema.pre('findOneAndUpdate', function () {
   this.set({ lastUpdated: new Date() });
-  next();
 });
 
 export const Workspace = model<IWorkspace>('Workspace', workspaceSchema);

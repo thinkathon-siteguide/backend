@@ -8,18 +8,11 @@ export interface AuthRequest extends Request {
   user?: any;
 }
 
-export const protect = async (
-  req: AuthRequest,
-  res: Response,
-  next: NextFunction
-) => {
+export const protect = async (req: AuthRequest, res: Response, next: NextFunction) => {
   try {
     let token: string | undefined;
 
-    if (
-      req.headers.authorization &&
-      req.headers.authorization.startsWith('Bearer')
-    ) {
+    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
       token = req.headers.authorization.split(' ')[1];
     }
 
@@ -46,4 +39,3 @@ export const protect = async (
     }
   }
 };
-

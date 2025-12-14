@@ -247,12 +247,14 @@ module/
 ### Database Schema
 
 **User Model:**
+
 - `name`: String (required)
 - `email`: String (required, unique, lowercase)
 - `password`: String (required, hashed, not selected by default)
 - `createdAt`, `updatedAt`: Timestamps
 
 **Workspace Model:**
+
 - `userId`: ObjectId (required, references User)
 - `name`: String (required, 3-100 chars)
 - `location`: String (required)
@@ -413,9 +415,12 @@ All async route handlers should use the `asyncHandler` utility:
 ```typescript
 import { asyncHandler } from '../utils/asyncHandler';
 
-router.get('/', asyncHandler(async (req, res) => {
-  // async code here
-}));
+router.get(
+  '/',
+  asyncHandler(async (req, res) => {
+    // async code here
+  })
+);
 ```
 
 ### Error Handling
@@ -435,9 +440,9 @@ if (!workspace) {
 Always scope queries to the authenticated user:
 
 ```typescript
-const workspace = await Workspace.findOne({ 
-  _id: workspaceId, 
-  userId: userId 
+const workspace = await Workspace.findOne({
+  _id: workspaceId,
+  userId: userId
 });
 ```
 

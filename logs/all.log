@@ -106,3 +106,131 @@
 2025-12-13 14:27:53:2753 [32minfo[39m: [32mServer running in development mode on port 4000[39m
 2025-12-13 14:29:44:2944 [32minfo[39m: [32mConnected to MongoDB[39m
 2025-12-13 14:29:44:2944 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-13 15:10:49:1049 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 15:21:02:212 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 17:04:25:425 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 17:12:04:124 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 17:15:30:1530 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 17:47:09:479 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 18:02:02:22 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 18:17:40:1740 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 18:47:39:4739 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 19:17:35:1735 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 20:02:42:242 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 20:44:12:4412 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 21:03:42:342 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 21:19:36:1936 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 21:51:18:5118 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-13 22:11:19:1119 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 22:11:19:1119 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-13 22:30:43:3043 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-13 22:30:43:3043 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-14 08:50:00:500 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-14 08:50:00:500 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-14 09:18:41:1841 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 09:34:33:3433 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 09:54:35:5435 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 10:03:51:351 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 10:47:55:4755 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 11:03:20:320 [31merror[39m: [31mUnexpected Error: User validation failed: password: Path `password` (`1234`, length 4) is shorter than the minimum allowed length (8).[39m
+2025-12-14 11:03:20:320 [31merror[39m: [31mStack trace: ValidationError: User validation failed: password: Path `password` (`1234`, length 4) is shorter than the minimum allowed length (8).[39m
+[31m    at model.Document.invalidate (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/document.js:3365:32)[39m
+[31m    at validatePath (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/document.js:3140:13)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+[31m    at async Promise.all (index 2)[39m
+[31m    at async model.$__validate (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/document.js:3081:3)[39m
+[31m    at async model.validate (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/document.js:2663:5)[39m
+[31m    at async model.validateBeforeSave (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/plugins/validateBeforeSave.js:34:7)[39m
+[31m    at async Kareem.execPre (/Users/farouq/Documents/Project/siteguard/backend/node_modules/kareem/index.js:65:24)[39m
+[31m    at async model.$__save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:369:5)[39m
+[31m    at async model.save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:609:5)[39m
+2025-12-14 11:03:29:329 [31merror[39m: [31mUnexpected Error: E11000 duplicate key error collection: doclite_backend.users index: username_1 dup key: { username: null }[39m
+2025-12-14 11:03:30:330 [31merror[39m: [31mStack trace: MongoServerError: E11000 duplicate key error collection: doclite_backend.users index: username_1 dup key: { username: null }[39m
+[31m    at InsertOneOperation.handleOk (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/insert.ts:79:13)[39m
+[31m    at tryOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:294:26)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+[31m    at async executeOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:123:12)[39m
+[31m    at async Collection.insertOne (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/collection.ts:294:12)[39m
+[31m    at async model.$__save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:398:16)[39m
+[31m    at async model.save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:609:5)[39m
+[31m    at async /Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:2722:9[39m
+[31m    at async Promise.all (index 0)[39m
+[31m    at async Function.create (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:2707:11)[39m
+2025-12-14 11:03:43:343 [31merror[39m: [31mUnexpected Error: E11000 duplicate key error collection: doclite_backend.users index: username_1 dup key: { username: null }[39m
+2025-12-14 11:03:43:343 [31merror[39m: [31mStack trace: MongoServerError: E11000 duplicate key error collection: doclite_backend.users index: username_1 dup key: { username: null }[39m
+[31m    at InsertOneOperation.handleOk (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/insert.ts:79:13)[39m
+[31m    at tryOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:294:26)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+[31m    at async executeOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:123:12)[39m
+[31m    at async Collection.insertOne (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/collection.ts:294:12)[39m
+[31m    at async model.$__save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:398:16)[39m
+[31m    at async model.save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:609:5)[39m
+[31m    at async /Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:2722:9[39m
+[31m    at async Promise.all (index 0)[39m
+[31m    at async Function.create (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:2707:11)[39m
+2025-12-14 11:03:54:354 [31merror[39m: [31mUnexpected Error: E11000 duplicate key error collection: doclite_backend.users index: username_1 dup key: { username: null }[39m
+2025-12-14 11:03:54:354 [31merror[39m: [31mStack trace: MongoServerError: E11000 duplicate key error collection: doclite_backend.users index: username_1 dup key: { username: null }[39m
+[31m    at InsertOneOperation.handleOk (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/insert.ts:79:13)[39m
+[31m    at tryOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:294:26)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+[31m    at async executeOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:123:12)[39m
+[31m    at async Collection.insertOne (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/collection.ts:294:12)[39m
+[31m    at async model.$__save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:398:16)[39m
+[31m    at async model.save (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:609:5)[39m
+[31m    at async /Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:2722:9[39m
+[31m    at async Promise.all (index 0)[39m
+[31m    at async Function.create (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/model.js:2707:11)[39m
+2025-12-14 11:05:53:553 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-14 11:05:53:553 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-14 11:07:50:750 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-14 11:07:50:750 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-14 11:12:04:124 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-14 11:12:04:124 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-14 11:14:00:140 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-14 11:14:00:140 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-14 11:14:23:1423 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-14 11:14:23:1423 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-14 11:31:51:3151 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 11:47:36:4736 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 12:03:25:325 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 16:39:31:3931 [32minfo[39m: [32mConnected to MongoDB[39m
+2025-12-14 16:39:31:3931 [32minfo[39m: [32mServer running in development mode on port 4000[39m
+2025-12-14 16:52:56:5256 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 16:57:10:5710 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 16:58:58:5858 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 17:07:43:743 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 17:27:10:2710 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 17:44:03:443 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 17:49:02:492 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 17:59:34:5934 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 18:06:15:615 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 18:07:49:749 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 18:23:26:2326 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 19:24:13:2413 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 19:24:59:2459 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 19:48:07:487 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 19:54:03:543 [33mwarn[39m: [33mMongoDB disconnected[39m
+2025-12-14 19:57:23:5723 [31merror[39m: [31mUnexpected Error: Socket 'secureConnect' timed out after 30029ms (connectTimeoutMS: 30000)[39m
+2025-12-14 19:57:23:5723 [31merror[39m: [31mStack trace: MongoServerSelectionError: Socket 'secureConnect' timed out after 30029ms (connectTimeoutMS: 30000)[39m
+[31m    at Topology.selectServer (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/sdam/topology.ts:630:30)[39m
+[31m    at async tryOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:206:16)[39m
+[31m    at async executeOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:123:12)[39m
+[31m    at async FindCursor._initialize (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/cursor/find_cursor.ts:92:22)[39m
+[31m    at async FindCursor.cursorInit (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/cursor/abstract_cursor.ts:917:21)[39m
+[31m    at async FindCursor.fetchBatch (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/cursor/abstract_cursor.ts:955:7)[39m
+[31m    at async FindCursor.next (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/cursor/abstract_cursor.ts:573:9)[39m
+[31m    at async Collection.findOne (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/collection.ts:552:20)[39m
+[31m    at async model.Query._findOne (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/query.js:2721:15)[39m
+[31m    at async model.Query.exec (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/query.js:4627:63)[39m
+2025-12-14 19:57:24:5724 [31merror[39m: [31mUnexpected Error: Socket 'secureConnect' timed out after 30029ms (connectTimeoutMS: 30000)[39m
+2025-12-14 19:57:24:5724 [31merror[39m: [31mStack trace: MongoServerSelectionError: Socket 'secureConnect' timed out after 30029ms (connectTimeoutMS: 30000)[39m
+[31m    at Topology.selectServer (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/sdam/topology.ts:630:30)[39m
+[31m    at async tryOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:206:16)[39m
+[31m    at async executeOperation (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/operations/execute_operation.ts:123:12)[39m
+[31m    at async FindCursor._initialize (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/cursor/find_cursor.ts:92:22)[39m
+[31m    at async FindCursor.cursorInit (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/cursor/abstract_cursor.ts:917:21)[39m
+[31m    at async FindCursor.fetchBatch (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/cursor/abstract_cursor.ts:955:7)[39m
+[31m    at async FindCursor.next (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/cursor/abstract_cursor.ts:573:9)[39m
+[31m    at async Collection.findOne (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongodb/src/collection.ts:552:20)[39m
+[31m    at async model.Query._findOne (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/query.js:2721:15)[39m
+[31m    at async model.Query.exec (/Users/farouq/Documents/Project/siteguard/backend/node_modules/mongoose/lib/query.js:4627:63)[39m
